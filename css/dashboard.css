@@ -1,0 +1,126 @@
+body {
+    background-color: #f2f3f8;
+}
+.datepicker.datepicker-dropdown.datepicker-orient-bottom.datepicker-orient-right.dropdown-menu {
+    margin-left: 30px;
+}
+
+.datepicker.datepicker-dropdown.datepicker-orient-bottom.datepicker-orient-left.dropdown-menu {
+    margin-left: -30px;
+}
+
+.datepicker.datepicker-dropdown.dropdown-menu.datepicker-rtl.datepicker-orient-right.datepicker-orient-bottom {
+    margin-right: -30px;
+}
+
+@media (min-width: 1025px) {
+    .m-header--fixed.m-header--minimize-off .m-header {
+        height: 90px;
+    }
+
+    .m-header--fixed .m-body {
+        padding-top: 80px !important;
+    }
+    .m-topbar .m-topbar__nav.m-nav>.m-nav__item.m-topbar__user-profile>.m-nav__link:hover .m-topbar__username
+    {
+        color: white;
+    }
+}
+@media (max-width: 1024px) {
+    .m-portlet .m-portlet__head .m-portlet__head-caption .m-portlet__head-title .m-portlet__head-text {
+        font-size: 1.3rem;
+    }
+}
+
+.m-topbar .m-topbar__nav.m-nav>.m-nav__item.m-topbar__user-profile {
+    padding-left: 15px;
+    padding-right: 15px;
+}
+
+.m-brand .m-brand__tools .m-brand__icon>i,
+.m-brand .m-brand__tools .m-brand__icon:hover>i,
+.m-nav .m-nav__item>.m-nav__link .m-nav__link-icon
+{
+    color: white;
+}
+
+.m-topbar .m-topbar__nav.m-nav>.m-nav__item>.m-nav__link .m-nav__link-icon.m-nav__link-icon--active .m-nav__link-icon-wrapper, .m-topbar .m-topbar__nav.m-nav>.m-nav__item>.m-nav__link .m-nav__link-icon:hover .m-nav__link-icon-wrapper {
+    background-color: #d0622f;
+}
+
+.datepicker table tr td span.active.active, 
+.datepicker table tr td span.active.disabled.active, 
+.datepicker table tr td span.active.disabled:active, 
+.datepicker table tr td span.active.disabled:hover.active, 
+.datepicker table tr td span.active.disabled:hover:active, 
+.datepicker table tr td span.active:active, 
+.datepicker table tr td span.active:hover.active, 
+.datepicker table tr td span.active:hover:active {
+    background-color: #f8691e;
+    border-color: #d0622f;
+}
+
+.datepicker table tr td span.active.active.focus, 
+.datepicker table tr td span.active.active:focus, 
+.datepicker table tr td span.active.active:hover, 
+.datepicker table tr td span.active.disabled.active.focus, 
+.datepicker table tr td span.active.disabled.active:focus, 
+.datepicker table tr td span.active.disabled.active:hover, 
+.datepicker table tr td span.active.disabled:active.focus, 
+.datepicker table tr td span.active.disabled:active:focus, 
+.datepicker table tr td span.active.disabled:active:hover, 
+.datepicker table tr td span.active.disabled:hover.active.focus, 
+.datepicker table tr td span.active.disabled:hover.active:focus, 
+.datepicker table tr td span.active.disabled:hover.active:hover, 
+.datepicker table tr td span.active.disabled:hover:active.focus, 
+.datepicker table tr td span.active.disabled:hover:active:focus, 
+.datepicker table tr td span.active.disabled:hover:active:hover, 
+.datepicker table tr td span.active:active.focus, 
+.datepicker table tr td span.active:active:focus, 
+.datepicker table tr td span.active:active:hover, 
+.datepicker table tr td span.active:hover.active.focus, 
+.datepicker table tr td span.active:hover.active:focus, 
+.datepicker table tr td span.active:hover.active:hover, 
+.datepicker table tr td span.active:hover:active.focus, 
+.datepicker table tr td span.active:hover:active:focus, 
+.datepicker table tr td span.active:hover:active:hover {
+    background-color: #d0622f;
+    border-color: #e2733e;
+}
+
+.m-widget11 .table thead tr>td {
+    color: #505050;
+}
+
+.modal-footer label.m-checkbox.m-checkbox--bold.m-checkbox--state-brand {
+    position: fixed;
+    left: 25px;
+}
+
+html[style*="direction: rtl"] .modal-footer label.m-checkbox.m-checkbox--bold.m-checkbox--state-brand {
+    position: fixed;
+    right: 25px;
+    max-width: 140px;
+}
+
+.input-group>.input-group-prepend>.btn, 
+.input-group>.input-group-prepend>.input-group-text, 
+.input-group>.input-group-append:not(:last-child)>.btn, 
+.input-group>.input-group-append:not(:last-child)>.input-group-text, 
+.input-group>.input-group-append:last-child>.btn:not(:last-child):not(.dropdown-toggle), 
+.input-group>.input-group-append:last-child>.input-group-text:not(:last-child) {
+    border-top-right-radius: .25rem;
+    border-bottom-right-radius: .25rem;
+}
+
+.m-header--minimize-on .m-brand .m-brand__logo .m-brand__logo-wrapper img {
+    max-height: inherit;
+}
+.m-scroll-top {
+    padding-top: 12px;
+}
+
+.input-group .month-datepicker {
+	background: #FFF;
+	cursor: pointer;
+}

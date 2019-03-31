@@ -1,0 +1,951 @@
+<!DOCTYPE html>
+<html lang="en" >
+<!-- <html lang="en" direction="rtl" style="direction: rtl;" > -->
+
+    <!-- begin::Head -->
+    <head>
+        <meta charset="utf-8" />
+        <title>Cash Flow</title>
+        <meta name="description" content="Add your income & expenses here.">
+        <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, shrink-to-fit=no">
+
+        <!--begin::Web font -->
+        <script src="https://ajax.googleapis.com/ajax/libs/webfont/1.6.16/webfont.js"></script>
+        <script>
+            WebFont.load({
+                google: {"families": ["Poppins:300,400,500,600,700", "Roboto:300,400,500,600,700"]},
+                active: function () {
+                    sessionStorage.fonts = true;
+                }
+            });
+        </script>
+
+        <!--end::Web font -->
+
+        <!--begin::Global Theme Styles -->
+
+        <!--TRL version:-->
+        <link href="css/vendors.bundle.css" rel="stylesheet" type="text/css" />
+        <link href="css/style.bundle.css" rel="stylesheet" type="text/css" />
+
+        <!--RTL version:-->
+        <!-- <link href="css/vendors.bundle.rtl.css" rel="stylesheet" type="text/css" /> -->
+        <!-- <link href="css/style.bundle.rtl.css" rel="stylesheet" type="text/css" /> -->
+
+        <!--end::Global Theme Styles -->
+
+        <link href="css/dashboard.css" rel="stylesheet" type="text/css" />
+
+        <link rel="shortcut icon" href="img/favicone.ico" />
+    </head>
+
+    <!-- end::Head -->
+
+    <!-- begin::Body -->
+    <body class="m-page--wide m-header--fixed m-header--fixed-mobile m-footer--push m-aside--offcanvas-default">
+
+        <!-- begin:: Page -->
+        <div class="m-grid m-grid--hor m-grid--root m-page">
+
+            <!-- begin::Header -->
+            <header id="m_header" class="m-grid__item m-header " m-minimize="minimize" m-minimize-offset="200" m-minimize-mobile-offset="200">
+                <div class="m-header__top m--bg-brand">
+                    <div class="m-container m-container--responsive m-container--xxl m-container--full-height m-page__container">
+                        <div class="m-stack m-stack--ver m-stack--desktop">
+
+                            <!-- begin::Brand -->
+                            <div class="m-stack__item m-brand m--bg-brand">
+                                <div class="m-stack m-stack--ver m-stack--general m-stack--inline">
+                                    <div class="m-stack__item m-stack__item--middle m-brand__logo">
+                                        <a href="#" class="m-brand__logo-wrapper">
+                                            <img alt="" src="img/logo.png" />
+                                        </a>
+                                    </div>
+                                    <div class="m-stack__item m-stack__item--middle m-brand__tools">
+                                        <!-- begin::Topbar Toggler-->
+                                        <a id="m_aside_header_topbar_mobile_toggle" href="javascript:;" class="m-brand__icon m--visible-tablet-and-mobile-inline-block">
+                                            <i class="flaticon-more"></i>
+                                        </a>
+                                        <!--end::Topbar Toggler-->
+                                    </div>
+                                </div>
+                            </div>
+
+                            <!-- end::Brand -->
+
+                            <!-- begin::Topbar -->
+                            <div class="m-stack__item m-stack__item--fluid m-header-head" id="m_header_nav">
+                                <div id="m_header_topbar" class="m-topbar  m-stack m-stack--ver m-stack--general">
+                                    <div class="m-stack__item m-topbar__nav-wrapper">
+                                        <ul class="m-topbar__nav m-nav m-nav--inline">
+                                            <li class="m-nav__item m-dropdown m-dropdown--large m-dropdown--arrow m-dropdown--align-center m-dropdown--mobile-full-width m-dropdown--skin-light	m-list-search m-list-search--skin-light" 
+                                                m-dropdown-toggle="click" id="m_quicksearch" m-quicksearch-mode="dropdown" m-dropdown-persistent="1">
+
+                                                <a href="#" class="m-nav__link m-dropdown__toggle">
+                                                    <span class="m-nav__link-icon m-nav__link-icon--aside-toggle">
+                                                        <span class="m-nav__link-icon-wrapper"><i class="flaticon-search-1"></i></span>
+                                                    </span>
+                                                </a>
+                                                <div class="m-dropdown__wrapper">					
+                                                    <span class="m-dropdown__arrow m-dropdown__arrow--center"></span>
+                                                    <div class="m-dropdown__inner ">
+                                                        <div class="m-dropdown__header">
+                                                            <form  class="m-list-search__form">
+                                                                <div class="m-list-search__form-wrapper">
+                                                                    <span class="m-list-search__form-input-wrapper">
+                                                                        <input id="m_quicksearch_input" autocomplete="off" type="text" name="q" class="m-list-search__form-input" value="" placeholder="Search...">
+                                                                    </span>
+                                                                    <span class="m-list-search__form-icon-close" id="m_quicksearch_close">
+                                                                        <i class="la la-remove"></i>
+                                                                    </span>
+                                                                </div>
+                                                            </form>  
+                                                        </div>
+                                                        <div class="m-dropdown__body">
+                                                            <div class="m-dropdown__scrollable m-scrollable" data-scrollable="true" data-height="300" data-mobile-height="200">
+                                                                <div class="m-dropdown__content">
+                                                                </div>
+                                                            </div>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                            </li>			
+                                            <li class="m-nav__item m-topbar__user-profile m-topbar__user-profile--img  m-dropdown m-dropdown--medium m-dropdown--arrow m-dropdown--header-bg-fill m-dropdown--align-right m-dropdown--mobile-full-width m-dropdown--skin-light"
+                                                m-dropdown-toggle="click">
+                                                <a href="#" class="m-nav__link">
+                                                    <!--<span class="m-topbar__welcome">Hello,&nbsp;</span>-->
+                                                    <span class="m-topbar__username">John Doe</span>
+                                                </a>
+                                            </li>
+                                            <li id="m_quick_sidebar_toggle" class="m-nav__item">
+                                                <a href="#" class="m-nav__link m-dropdown__toggle">
+                                                    <span class="m-nav__link-icon m-nav__link-icon--aside-toggle">
+                                                        <span class="m-nav__link-icon-wrapper"><i class="flaticon-settings"></i></span>
+                                                    </span>
+                                                </a>
+                                            </li>
+                                        </ul>
+                                    </div>
+                                </div>
+                            </div>
+
+                            <!-- end::Topbar -->
+                        </div>
+                    </div>
+                </div>
+            </header>
+
+            <!-- end::Header -->
+
+            <!-- begin::Body -->
+            <div class="m-grid__item m-grid__item--fluid  m-grid m-grid--ver-desktop m-grid--desktop 	m-container m-container--responsive m-container--xxl m-page__container m-body">
+                <div class="m-grid__item m-grid__item--fluid m-wrapper">
+
+                    <!-- BEGIN: Subheader -->
+                    <div class="m-subheader ">
+                        <div class="d-flex align-items-center">
+                            <div class="mr-auto">
+                                <h3 class="m-subheader__title ">Dashboard&nbsp;</h3>
+                            </div>
+                            <div class="month-box">
+                                <div class="input-group">
+                                    <div class="input-group-prepend">
+                                        <button class="btn btn-brand" type="button"><i class="la la-angle-left"></i></button>
+                                    </div>
+                                    <input type="text" class="form-control m--align-center month-datepicker" id="m_datepicker_main" placeholder="Select Month" readonly>
+                                    <div class="input-group-append">
+                                        <button class="btn btn-brand" type="button"><i class="la la-angle-right"></i></button>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- END: Subheader -->
+                    <div class="m-content">
+
+                        <!--begin:: Widgets/Stats-->
+                        <div class="m-portlet ">
+                            <div class="m-portlet__body  m-portlet__body--no-padding">
+                                <div class="row m-row--no-padding m-row--col-separator-xl">
+                                    <div class="col-md-12 col-lg-4">
+
+                                        <!--begin::Total Profit-->
+                                        <div class="m-widget24">
+                                            <div class="m-widget24__item">
+                                                <h4 class="m-widget24__title">
+                                                    Incomes
+                                                </h4><br>
+                                                <span class="m-widget24__desc">
+                                                    All Earnings
+                                                </span>
+                                                <span class="m-widget24__stats m--font-brand">
+                                                    $17,200
+                                                </span>
+                                                <div class="m--space-10"></div>
+                                                <div class="progress m-progress--sm">
+                                                    <div class="progress-bar m--bg-brand" role="progressbar" style="width: 65%;" aria-valuenow="50" aria-valuemin="0" aria-valuemax="100"></div>
+                                                </div>
+                                                <span class="m-widget24__change">
+                                                    Change
+                                                </span>
+                                                <span class="m-widget24__number">
+                                                    65%
+                                                </span>
+                                            </div>
+                                        </div>
+
+                                        <!--end::Total Profit-->
+                                    </div>
+                                    <div class="col-md-12 col-lg-4">
+
+                                        <!--begin::New Feedbacks-->
+                                        <div class="m-widget24">
+                                            <div class="m-widget24__item">
+                                                <h4 class="m-widget24__title">
+                                                    Expenses
+                                                </h4><br>
+                                                <span class="m-widget24__desc">
+                                                    All Expenditures
+                                                </span>
+                                                <span class="m-widget24__stats m--font-brand">
+                                                    $2,500
+                                                </span>
+                                                <div class="m--space-10"></div>
+                                                <div class="progress m-progress--sm">
+                                                    <div class="progress-bar m--bg-brand" role="progressbar" style="width: 80%;" aria-valuenow="50" aria-valuemin="0" aria-valuemax="100"></div>
+                                                </div>
+                                                <span class="m-widget24__change">
+                                                    Change
+                                                </span>
+                                                <span class="m-widget24__number">
+                                                    80%
+                                                </span>
+                                            </div>
+                                        </div>
+
+                                        <!--end::New Feedbacks-->
+                                    </div>
+                                    <div class="col-md-12 col-lg-4">
+
+                                        <!--begin::New Orders-->
+                                        <div class="m-widget24">
+                                            <div class="m-widget24__item">
+                                                <h4 class="m-widget24__title">
+                                                    Total
+                                                </h4><br>
+                                                <span class="m-widget24__desc">
+                                                    Final Amount
+                                                </span>
+                                                <span class="m-widget24__stats m--font-brand">
+                                                    $14,700
+                                                </span>
+                                                <div class="m--space-10"></div>
+                                                <div class="progress m-progress--sm">
+                                                    <div class="progress-bar m--bg-brand" role="progressbar" style="width: 72%;" aria-valuenow="50" aria-valuemin="0" aria-valuemax="100"></div>
+                                                </div>
+                                                <span class="m-widget24__change">
+                                                    Change
+                                                </span>
+                                                <span class="m-widget24__number">
+                                                    72%
+                                                </span>
+                                            </div>
+                                        </div>
+
+                                        <!--end::New Orders-->
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+
+                        <!--end:: Widgets/Stats-->
+
+                        <!--Begin::Section-->
+                        <div class="row">
+                            <div class="col-xl-12">
+                                <!--begin:: Finance Stats-->
+                                <div class="m-portlet  m-portlet--full-height ">
+                                    <div class="m-portlet__head">
+                                        <div class="m-portlet__head-caption">
+                                            <div class="m-portlet__head-title">
+                                                <h3 class="m-portlet__head-text">
+                                                    Pendings
+                                                </h3>
+                                            </div>
+                                        </div>
+                                    </div>
+
+                                    <div class="row m-row--col-separator-xl">
+                                        <div class="col-md-12 col-lg-6">
+                                            <div class="m-portlet__body">
+                                                <div class="m-widget1 m-widget1--paddingless">
+                                                    <div class="m-widget1__item">
+                                                        <div class="row m-row--no-padding align-items-center">
+                                                            <div class="col">
+                                                                <h3 class="m-widget1__title">
+                                                                    Pending to receive 
+                                                                </h3>
+                                                            </div>
+                                                            <div class="col m--align-right">
+                                                                <span class="m-widget1__number m--font-brand">
+                                                                    $5,000
+                                                                </span>
+                                                            </div>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                        <div class="col-md-12 col-lg-6">
+                                            <div class="m-portlet__body">
+                                                <div class="m-widget1 m-widget1--paddingless">
+                                                    <div class="m-widget1__item">
+                                                        <div class="row m-row--no-padding align-items-center">
+                                                            <div class="col">
+                                                                <h3 class="m-widget1__title">
+                                                                    Pending to pay
+                                                                </h3>
+                                                            </div>
+                                                            <div class="col m--align-right">
+                                                                <span class="m-widget1__number m--font-brand">
+                                                                    $3,000
+                                                                </span>
+                                                            </div>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                                <!--end:: Finance Stats-->
+                            </div>
+                        </div>
+                        <!--end:: Widgets/Pendings-->
+                        <!--Begin::Section-->
+                        <div class="row">
+                            <div class="col-12">
+                                <div class="m-portlet__body mb-2">
+                                    <div class="m-widget1 m-widget1--paddingless">
+                                        <div class="m-widget1__item">
+                                            <div class="row m-row--no-padding">
+                                                <div class="col  m--align-right">
+                                                    <button type="button" class="btn btn-brand" data-toggle="modal" data-target="#m_modal_1">Send to Accountant</button>
+                                                    &nbsp
+                                                    <div class="m-dropdown m-dropdown--inline m-dropdown--small m-dropdown--arrow m-dropdown--align-right" m-dropdown-toggle="hover">
+                                                        <button href="#" class="m-dropdown__toggle btn btn-brand dropdown-toggle">
+                                                            Upload Document
+                                                        </button>
+                                                        <div class="m-dropdown__wrapper">
+                                                            <span class="m-dropdown__arrow m-dropdown__arrow--right"></span>
+                                                            <div class="m-dropdown__inner">
+                                                                <div class="m-dropdown__body">              
+                                                                    <div class="m-dropdown__content">
+                                                                        <ul class="m-nav">
+                                                                            <li class="m-nav__section m-nav__section--first  m--align-center">
+                                                                                <span class="m-nav__section-text m--font-brand">Select Doc Type</span>
+                                                                            </li>
+                                                                            <li class="m-nav__separator m-nav__separator--fit">
+                                                                            </li>
+                                                                            <li class="m-nav__item  m--align-center">
+                                                                                <a href="" class="m-nav__link" data-toggle="modal" data-target="#m_modal_4">
+                                                                                    <span class="m-nav__link-text">Upload Income</span>
+                                                                                </a>
+                                                                            </li>
+                                                                            <li class="m-nav__item  m--align-center">
+                                                                                <a href="" class="m-nav__link" data-toggle="modal" data-target="#m_modal_4">
+                                                                                    <span class="m-nav__link-text">Upload Expense</span>
+                                                                                </a>
+                                                                            </li>
+                                                                            <li class="m-nav__item  m--align-center">
+                                                                                <a href="" class="m-nav__link" data-toggle="modal" data-target="#m_modal_4">
+                                                                                    <span class="m-nav__link-text">Upload Other</span>
+                                                                                </a>
+                                                                            </li>
+                                                                        </ul>
+                                                                    </div>
+                                                                </div>
+                                                            </div>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <!--End::Section-->
+                        <br />
+                        <!--Begin::Section-->
+                        <div class="row">
+                            <div class="col-xl-6">
+
+                                <!--begin:: Widgets/Data-->
+                                <div class="m-portlet m-portlet--full-height ">
+                                    <div class="m-portlet__head">
+                                        <div class="m-portlet__head-caption">
+                                            <div class="m-portlet__head-title">
+                                                <h3 class="m-portlet__head-text">
+                                                    Incomes
+                                                </h3>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="m-portlet__body">
+                                        <!--begin::Widget 11-->
+                                        <div class="m-widget11">
+                                            <div class="table-responsive">
+
+                                                <!--begin::Table-->
+                                                <table class="table">
+
+                                                    <!--begin::Thead-->
+                                                    <thead>
+                                                        <tr>
+                                                            <td class="m-widget11__date">Date</td>
+                                                            <td class="m-widget11__title">Title</td>
+                                                            <td class="m-widget11__amount m--align-right">Amount</td>
+                                                            <td class="m-widget11__doc m--align-right">Doc</td>
+                                                        </tr>
+                                                    </thead>
+
+                                                    <!--end::Thead-->
+
+                                                    <!--begin::Tbody-->
+                                                    <tbody>
+                                                        <tr>
+                                                            <td>02/02/2019</td>
+                                                            <td>Sell Item 1</td>
+                                                            <td class="m--align-right m--font-brand">$1,100</td>
+                                                            <td class="m--align-right m--font-brand"><a href="#"><i class="flaticon-attachment"></i></a></td>
+                                                        </tr>
+                                                        <tr>
+                                                            <td>05/02/2019</td>
+                                                            <td>Sell Item 2</td>
+                                                            <td class="m--align-right m--font-brand">$400</td>
+                                                            <td class="m--align-right m--font-brand"><a href="#"><i class="flaticon-attachment"></i></a></td>
+                                                        </tr>
+                                                        <tr>
+                                                            <td>10/02/2019</td>
+                                                            <td>Salary</td>
+                                                            <td class="m--align-right m--font-brand">$10,000</td>
+                                                            <td class="m--align-right m--font-brand"><a href="#"><i class="flaticon-attachment"></i></a></td>
+                                                        </tr>
+                                                        <tr>
+                                                            <td>17/02/2019</td>
+                                                            <td>Sell Item 3</td>
+                                                            <td class="m--align-right m--font-brand">$700</td>
+                                                            <td class="m--align-right m--font-brand"><a href="#"><i class="flaticon-attachment"></i></a></td>
+                                                        </tr>
+                                                        <tr>
+                                                            <td>20/02/2019</td>
+                                                            <td>Sell Item 4</td>
+                                                            <td class="m--align-right m--font-brand">$1,000</td>
+                                                            <td class="m--align-right m--font-brand"><a href="#"><i class="flaticon-attachment"></i></a></td>
+                                                        </tr>
+                                                        <tr>
+                                                            <td>22/02/2019</td>
+                                                            <td>Sell Item 5</td>
+                                                            <td class="m--align-right m--font-brand">$1,500</td>
+                                                            <td class="m--align-right m--font-brand"><a href="#"><i class="flaticon-attachment"></i></a></td>
+                                                        </tr>
+                                                        <tr>
+                                                            <td>27/02/2019</td>
+                                                            <td>Sell Item 6</td>
+                                                            <td class="m--align-right m--font-brand">$2,500</td>
+                                                            <td class="m--align-right m--font-brand"><a href="#"><i class="flaticon-attachment"></i></a></td>
+                                                        </tr>
+                                                    </tbody>
+
+                                                    <!--end::Tbody-->
+                                                </table>
+
+                                                <!--end::Table-->
+                                            </div>
+                                        </div>
+
+                                        <!--end::Widget 11-->
+                                    </div>
+                                </div>
+
+                                <!--end:: Widgets/Application Sales-->
+                            </div>
+                            <div class="col-xl-6">
+
+                                <!--begin:: Widgets/Data-->
+                                <div class="m-portlet m-portlet--full-height ">
+                                    <div class="m-portlet__head">
+                                        <div class="m-portlet__head-caption">
+                                            <div class="m-portlet__head-title">
+                                                <h3 class="m-portlet__head-text">
+                                                    Expenses
+                                                </h3>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="m-portlet__body">
+                                        <!--begin::Widget 11-->
+                                        <div class="m-widget11">
+                                            <div class="table-responsive">
+
+                                                <!--begin::Table-->
+                                                <table class="table">
+
+                                                    <!--begin::Thead-->
+                                                    <thead>
+                                                        <tr>
+                                                            <td class="m-widget11__date">Date</td>
+                                                            <td class="m-widget11__title">Title</td>
+                                                            <td class="m-widget11__amount m--align-right">Amount</td>
+                                                            <td class="m-widget11__doc m--align-right">Doc</td>
+                                                        </tr>
+                                                    </thead>
+
+                                                    <!--end::Thead-->
+
+                                                    <!--begin::Tbody-->
+                                                    <tbody>
+                                                        <tr>
+                                                            <td>03/02/2019</td>
+                                                            <td>Buy Item 1</td>
+                                                            <td class="m--align-right m--font-brand">$200</td>
+                                                            <td class="m--align-right m--font-brand"><a href="#"><i class="flaticon-attachment"></i></a></td>
+                                                        </tr>
+                                                        <tr>
+                                                            <td>15/02/2019</td>
+                                                            <td>Buy Item 2</td>
+                                                            <td class="m--align-right m--font-brand">$400</td>
+                                                            <td class="m--align-right m--font-brand"><a href="#"><i class="flaticon-attachment"></i></a></td>
+                                                        </tr>
+                                                        <tr>
+                                                            <td>17/02/2019</td>
+                                                            <td>Salary to helper</td>
+                                                            <td class="m--align-right m--font-brand">$1,500</td>
+                                                            <td class="m--align-right m--font-brand"><a href="#"><i class="flaticon-attachment"></i></a></td>
+                                                        </tr>
+                                                        <tr>
+                                                            <td>27/02/2019</td>
+                                                            <td>Buy Item 3</td>
+                                                            <td class="m--align-right m--font-brand">$400</td>
+                                                            <td class="m--align-right m--font-brand"><a href="#"><i class="flaticon-attachment"></i></a></td>
+                                                        </tr>
+                                                    </tbody>
+
+                                                    <!--end::Tbody-->
+                                                </table>
+
+                                                <!--end::Table-->
+                                            </div>
+                                        </div>
+
+                                        <!--end::Widget 11-->
+                                    </div>
+                                </div>
+
+                                <!--end:: Widgets/Application Sales-->
+                            </div>
+                        </div>
+
+                        <!--End::Section-->
+
+                        <!--Begin::Section-->
+                        <div class="row">
+                            <div class="col-xl-6">
+
+                                <!--begin:: Widgets/Data-->
+                                <div class="m-portlet m-portlet--full-height ">
+                                    <div class="m-portlet__head">
+                                        <div class="m-portlet__head-caption">
+                                            <div class="m-portlet__head-title">
+                                                <h3 class="m-portlet__head-text">
+                                                    Pending to receive
+                                                </h3>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="m-portlet__body">
+                                        <!--begin::Widget 11-->
+                                        <div class="m-widget11">
+                                            <div class="table-responsive">
+
+                                                <!--begin::Table-->
+                                                <table class="table">
+
+                                                    <!--begin::Thead-->
+                                                    <thead>
+                                                        <tr>
+                                                            <td class="m-widget11__date">Date</td>
+                                                            <td class="m-widget11__title">Title</td>
+                                                            <td class="m-widget11__amount m--align-right">Amount</td>
+                                                            <td class="m-widget11__doc m--align-right">Doc</td>
+                                                        </tr>
+                                                    </thead>
+
+                                                    <!--end::Thead-->
+
+                                                    <!--begin::Tbody-->
+                                                    <tbody>
+                                                        <tr>
+                                                            <td>12/02/2019</td>
+                                                            <td>Sell Item 7</td>
+                                                            <td class="m--align-right m--font-brand">$1,000</td>
+                                                            <td class="m--align-right m--font-brand"><a href="#"><i class="flaticon-attachment"></i></a></td>
+                                                        </tr>
+                                                        <tr>
+                                                            <td>18/02/2019</td>
+                                                            <td>Sell Item 8</td>
+                                                            <td class="m--align-right m--font-brand">$1,700</td>
+                                                            <td class="m--align-right m--font-brand"><a href="#"><i class="flaticon-attachment"></i></a></td>
+                                                        </tr>
+                                                        <tr>
+                                                            <td>23/02/2019</td>
+                                                            <td>Sell Item 9</td>
+                                                            <td class="m--align-right m--font-brand">$800</td>
+                                                            <td class="m--align-right m--font-brand"><a href="#"><i class="flaticon-attachment"></i></a></td>
+                                                        </tr>
+                                                        <tr>
+                                                            <td>27/02/2019</td>
+                                                            <td>Sell Item 10</td>
+                                                            <td class="m--align-right m--font-brand">$700</td>
+                                                            <td class="m--align-right m--font-brand"><a href="#"><i class="flaticon-attachment"></i></a></td>
+                                                        </tr>
+                                                        <tr>
+                                                            <td>28/02/2019</td>
+                                                            <td>Sell Item 11</td>
+                                                            <td class="m--align-right m--font-brand">$1,300</td>
+                                                            <td class="m--align-right m--font-brand"><a href="#"><i class="flaticon-attachment"></i></a></td>
+                                                        </tr>
+                                                    </tbody>
+
+                                                    <!--end::Tbody-->
+                                                </table>
+
+                                                <!--end::Table-->
+                                            </div>
+                                        </div>
+
+                                        <!--end::Widget 11-->
+                                    </div>
+                                </div>
+
+                                <!--end:: Widgets/Application Sales-->
+                            </div>
+                            <div class="col-xl-6">
+
+                                <!--begin:: Widgets/Data-->
+                                <div class="m-portlet m-portlet--full-height ">
+                                    <div class="m-portlet__head">
+                                        <div class="m-portlet__head-caption">
+                                            <div class="m-portlet__head-title">
+                                                <h3 class="m-portlet__head-text">
+                                                    Pending to pay
+                                                </h3>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="m-portlet__body">
+                                        <!--begin::Widget 11-->
+                                        <div class="m-widget11">
+                                            <div class="table-responsive">
+
+                                                <!--begin::Table-->
+                                                <table class="table">
+
+                                                    <!--begin::Thead-->
+                                                    <thead>
+                                                        <tr>
+                                                            <td class="m-widget11__date">Date</td>
+                                                            <td class="m-widget11__title">Title</td>
+                                                            <td class="m-widget11__amount m--align-right">Amount</td>
+                                                            <td class="m-widget11__doc m--align-right">Doc</td>
+                                                        </tr>
+                                                    </thead>
+
+                                                    <!--end::Thead-->
+
+                                                    <!--begin::Tbody-->
+                                                    <tbody>
+                                                        <tr>
+                                                            <td>14/02/2019</td>
+                                                            <td>Buy Item 4</td>
+                                                            <td class="m--align-right m--font-brand">$300</td>
+                                                            <td class="m--align-right m--font-brand"><a href="#"><i class="flaticon-attachment"></i></a></td>
+                                                        </tr>
+                                                        <tr>
+                                                            <td>15/02/2019</td>
+                                                            <td>Buy Item 5</td>
+                                                            <td class="m--align-right m--font-brand">$600</td>
+                                                            <td class="m--align-right m--font-brand"><a href="#"><i class="flaticon-attachment"></i></a></td>
+                                                        </tr>
+                                                        <tr>
+                                                            <td>17/02/2019</td>
+                                                            <td>Buy Item 6</td>
+                                                            <td class="m--align-right m--font-brand">$500</td>
+                                                            <td class="m--align-right m--font-brand"><a href="#"><i class="flaticon-attachment"></i></a></td>
+                                                        </tr>
+                                                        <tr>
+                                                            <td>21/02/2019</td>
+                                                            <td>Buy Item 7</td>
+                                                            <td class="m--align-right m--font-brand">$400</td>
+                                                            <td class="m--align-right m--font-brand"><a href="#"><i class="flaticon-attachment"></i></a></td>
+                                                        </tr>
+                                                        <tr>
+                                                            <td>24/02/2019</td>
+                                                            <td>Buy Item 8</td>
+                                                            <td class="m--align-right m--font-brand">$1,300</td>
+                                                            <td class="m--align-right m--font-brand"><a href="#"><i class="flaticon-attachment"></i></a></td>
+                                                        </tr>
+                                                        <tr>
+                                                            <td>25/02/2019</td>
+                                                            <td>Buy Item 9</td>
+                                                            <td class="m--align-right m--font-brand">$900</td>
+                                                            <td class="m--align-right m--font-brand"><a href="#"><i class="flaticon-attachment"></i></a></td>
+                                                        </tr>
+                                                    </tbody>
+
+                                                    <!--end::Tbody-->
+                                                </table>
+
+                                                <!--end::Table-->
+                                            </div>
+                                        </div>
+
+                                        <!--end::Widget 11-->
+                                    </div>
+                                </div>
+
+                                <!--end:: Widgets/Application Sales-->
+                            </div>
+                        </div>
+
+                        <!--End::Section-->
+
+                    </div>
+                </div>
+
+                <!--</div>-->
+            </div>
+
+            <!-- end::Body -->
+
+            <!-- begin::Footer -->
+            <footer class="m-grid__item m-footer ">
+                <div class="m-container m-container--responsive m-container--xxl m-container--full-height m-page__container">
+                    <div class="m-footer__wrapper">
+                        <div class="m-stack m-stack--flex-tablet-and-mobile m-stack--ver m-stack--desktop">
+                            <div class="m-stack__item m-stack__item--center m-stack__item--middle m-stack__item--last">
+                                <span class="m-footer__copyright">
+                                    2019 © Cash Flow
+                                </span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </footer>
+
+            <!-- end::Footer -->
+        </div>
+
+        <!-- end:: Page -->
+
+        <!-- begin::Quick Sidebar -->
+        <div id="m_quick_sidebar" class="m-quick-sidebar m-quick-sidebar--tabbed m-quick-sidebar--skin-light">
+            <div class="m-quick-sidebar__content m--hide">
+                <span id="m_quick_sidebar_close" class="m-quick-sidebar__close"><i class="la la-close"></i></span>
+                <ul id="m_quick_sidebar_tabs" class="nav nav-tabs m-tabs m-tabs-line m-tabs-line--brand" role="tablist">
+                    <li class="nav-item m-tabs__item">
+                        <a class="nav-link m-tabs__link active" data-toggle="tab" href="#m_quick_sidebar_tabs_settings" role="tab">Settings</a>
+                    </li>
+                    <li class="nav-item m-tabs__item">
+                        <a class="nav-link m-tabs__link" data-toggle="tab" href="#m_quick_sidebar_tabs_messenger" role="tab"></a>
+                    </li>
+                </ul>
+                <div class="tab-content">
+                    <div class="tab-pane active" id="m_quick_sidebar_tabs_settings" role="tabpanel">
+                        <div class="m-list-settings m-scrollable">
+                            <div class="m-list-settings__group">
+                                <div class="m-list-settings__heading">General Settings</div>
+                                <div class="m-list-settings__item">
+                                    <span class="m-list-settings__item-label">
+                                        Accountant Email
+                                    </span>
+                                    <span class="m-list-settings__item-control">
+                                        <input type="email" value="my@accountant.com" class="form-control m-input" placeholder="Enter email">
+                                    </span>
+                                </div>
+                                <div class="m-list-settings__item">
+                                    <span class="m-list-settings__item-label">Email Notifications</span>
+                                    <span class="m-list-settings__item-control">
+                                        <span class="m-switch m-switch--outline m-switch--icon-check m-switch--brand">
+                                            <label>
+                                                <input type="checkbox" checked="checked" name="">
+                                                <span></span> 
+                                            </label>
+                                        </span>	 
+                                    </span>
+                                </div>
+                                <div class="m-list-settings__item">
+                                    <span class="m-list-settings__item-label">SMS Alerts</span>
+                                    <span class="m-list-settings__item-control">
+                                        <span class="m-switch m-switch--outline m-switch--icon-check m-switch--brand">
+                                            <label>
+                                                <input type="checkbox" name="">
+                                                <span></span> 
+                                            </label>
+                                        </span>	 
+                                    </span>
+                                </div>
+                            </div>
+                            <div class="m-list-settings__group">
+                                <div class="m-list-settings__heading">System Settings</div>
+                                <div class="m-list-settings__item">
+                                    <span class="m-list-settings__item-label">System Logs</span>
+                                    <span class="m-list-settings__item-control">
+                                        <span class="m-switch m-switch--outline m-switch--icon-check m-switch--brand">
+                                            <label>
+                                                <input type="checkbox" name="">
+                                                <span></span> 
+                                            </label>
+                                        </span>	 
+                                    </span>
+                                </div>
+                                <div class="m-list-settings__item">
+                                    <span class="m-list-settings__item-label">Error Reporting</span>
+                                    <span class="m-list-settings__item-control">
+                                        <span class="m-switch m-switch--outline m-switch--icon-check m-switch--brand">
+                                            <label>
+                                                <input type="checkbox" name="">
+                                                <span></span> 
+                                            </label>
+                                        </span>	 
+                                    </span>
+                                </div>
+                                <div class="m-list-settings__item">
+                                    <span class="m-list-settings__item-label">Applications Logs</span>
+                                    <span class="m-list-settings__item-control">
+                                        <span class="m-switch m-switch--outline m-switch--icon-check m-switch--brand">
+                                            <label>
+                                                <input type="checkbox" name="">
+                                                <span></span> 
+                                            </label>
+                                        </span>	 
+                                    </span>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="tab-pane" id="m_quick_sidebar_tabs_messenger" role="tabpanel">
+                        <div class="m-messenger m-messenger--message-arrow m-messenger--skin-light">
+                            <div class="m-messenger__messages m-scrollable">
+
+                            </div>
+
+                        </div>
+                    </div>
+
+                </div>
+            </div>
+        </div>
+        <!-- end::Quick Sidebar -->	
+
+        <!-- begin::Scroll Top -->
+        <div id="m_scroll_top" class="m-scroll-top">
+            <i class="la la-arrow-up"></i>
+        </div>
+
+        <!-- end::Scroll Top -->
+        <!--begin::Modal-->
+        <div class="modal fade" id="m_modal_1" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
+            <div class="modal-dialog modal-dialog-centered" role="document">
+                <div class="modal-content">
+                    <div class="modal-header">
+                        <h5 class="modal-title" id="exampleModalLabel">Please Confirm</h5>
+                        <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                            <span aria-hidden="true">&times;</span>
+                        </button>
+                    </div>
+                    <div class="modal-body">
+                        <p>Send all invoices to my@accountant.com?</p>
+                        <p>
+
+                        </p>
+                    </div>
+                    <div class="modal-footer">
+                        <label class="m-checkbox m-checkbox--bold m-checkbox--state-brand">
+                            <input type="checkbox"> Send me a copy
+                            <span></span>
+                        </label>
+                        <button type="button" class="btn btn-secondary" data-dismiss="modal">Cancel</button>
+                        <button type="button" class="btn btn-brand">OK</button>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <!--end::Modal-->
+
+        <!--begin::Modal-->
+        <div class="modal fade" id="m_modal_4" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
+            <div class="modal-dialog modal-lg" role="document">
+                <div class="modal-content">
+                    <div class="modal-header">
+                        <h5 class="modal-title" id="exampleModalLabel">Upload Document</h5>
+                        <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                            <span aria-hidden="true">&times;</span>
+                        </button>
+                    </div>
+                    <div class="modal-body">
+                        <form class="m-form m-form--fit m-form--label-align-right">
+                            <div class="form-group m-form__group row">
+                                <label for="doc-type" class="col-12 col-lg-2 col-form-label">Doc Type</label>
+                                <div class="col-12 col-lg-10">
+                                    <label class="col-form-label font-weight-bold">Income</label>
+                                </div>
+                            </div>
+
+                            <div class="form-group m-form__group row">
+                                <label for="doc" class="col-12 col-lg-2 col-form-label">Document</label>
+                                <div class="col-12 col-lg-10">
+                                    <div class="m-dropzone dropzone dz-clickable" action="inc/api/dropzone/upload.php" id="m-dropzone-one">
+                                        <div class="m-dropzone__msg dz-message needsclick">
+                                            <h3 class="m-dropzone__msg-title">Drop files here or click to upload.</h3>
+                                            <span class="m-dropzone__msg-desc">Select your file which you want to attach with this entry.</span>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+
+                            <div class="form-group m-form__group row">
+                                <label for="comment" class="col-12 col-lg-2 col-form-label">Comment</label>
+                                <div class="col-12 col-lg-10">
+                                    <textarea class="form-control m-input" id="comment" rows="3"></textarea>
+                                </div>
+                            </div>
+
+                        </form>
+                    </div>
+                    <div class="modal-footer">
+                        <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
+                        <button type="button" class="btn btn-brand">Upload Document</button>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <!--end::Modal-->
+
+        <!--begin::Global Theme Bundle -->
+        <script src="js/vendors.bundle.js" type="text/javascript"></script>
+        <script src="js/scripts.bundle.js" type="text/javascript"></script>
+
+        <!--end::Global Theme Bundle -->
+
+        <!--begin::Page Scripts -->
+        <script src="js/dashboard.js" type="text/javascript"></script>
+
+        <!--end::Page Scripts -->
+
+    </body>
+
+    <!-- end::Body -->
+</html>
